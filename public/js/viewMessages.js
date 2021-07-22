@@ -9,8 +9,10 @@ const getMessages = () => {
         const data = snapshot.val()
         //loop through properites in object and key takes the context of one of the property names 
         for(let key in data){
-             if(data[key] === passcode.value){
+             if(key === passcode.value){
             console.log("match found")
+            const message = document.querySelector("#message");
+            message.innerHTML = data[key]
         }
         }
        
