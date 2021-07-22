@@ -1,3 +1,4 @@
+var tries = 3; 
 //define the buttons function
 const getMessages = () => {
     //get a value of the text box
@@ -11,14 +12,15 @@ const getMessages = () => {
         console.log(data)
         //loop through properites in object and key takes the context of one of the property names 
       for(let key in data){
-             if(data[key].passcode === passcode.value){
-            console.log("match found")
-            const message = document.querySelector("#message");
-            message.innerHTML = data[key].message
-             }
-             else{
+            if(data[key].passcode === passcode.value){
+                console.log(data[key].passcode, passcode.value)
+                const message = document.querySelector("#message");
+                message.innerHTML = data[key].message;
+            }
+            else {
+                 console.log("Error")
                  const error = document.querySelector("#error")
-                 //error.classList.remove("hidden")
+                 error.classList.remove("hidden")
              }
         } 
        
