@@ -7,7 +7,10 @@ const getMessages = () => {
     //event listener that retrieves the data
     messagesRef.on('value', (snapshot) => {
         const data = snapshot.val()
-        console.log(data)
+        //loop through properites in object and key takes the context of one of the property names 
+        for(let key in data){
+            console.log(key, data[key])
+        }
     })
 
 
