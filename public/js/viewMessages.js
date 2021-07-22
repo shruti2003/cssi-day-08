@@ -17,11 +17,13 @@ const getMessages = () => {
                 const message = document.querySelector("#message");
                 message.innerHTML = data[key].message;
             }
+          /* 
             else {
                  console.log("Error")
                  const error = document.querySelector("#error")
                  error.classList.remove("hidden")
              }
+             */
         } 
        
     })
